@@ -1,6 +1,6 @@
 %h1 This is the workouts#index placzeholde
 
 - @workouts.each do |workout|
-    %p= workout.date
-    %p= workout.workout
+    %h2= link_to workout.date, workout
+    %H3= workout.workout
     %hr/
