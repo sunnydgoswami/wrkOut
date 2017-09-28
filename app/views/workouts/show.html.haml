@@ -4,7 +4,17 @@
 %p= @workout.workout
 %p= @workout.mood
 %p= @workout.length
-%br/
+%hr/
+
+#exercise
+%h3 Exercises
+= render @workout.exercises
+%hr/
+
+#exerciseForm
+%h3 Add Exercises
+= render 'exercises/form'
+
 
 = link_to "Back", root_path
 |
