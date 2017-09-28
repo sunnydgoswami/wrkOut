@@ -25,9 +25,17 @@ class WorkoutsController < ApplicationController
     end
     
     def update
+        if @workout.update(workout_params)
+            redirect_to @workout
+        else
+            render 'new'
+        end
     end
     
     def destroy
+        @workout.destroy
+        flash[:success] = "Workout Deleted!"
+        redirect_to @workout
     end
     
     private
