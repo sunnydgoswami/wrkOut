@@ -2,17 +2,31 @@
 %html
 %head
   %title WrkOut
+  %meta{:charset => "utf-8"}
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  %meta{:name => "viewport", :content => "width=device-width; initial-scale=1.0; maximum-scale=1.0;"}
   = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
   = csrf_meta_tags
 %body
-  %nav.navbar.navbar-default
-    .container
-      .navbar-header
-        = link_to 'WrkOut', root_path, class: 'navbar-brand'
-      .nav.navbar-nav.navbar-right
-        = link_to "New Workout", new_workout_path, class: 'navbar navbar-link'
-        
-  .container
-    = yield
+  .navbar.navbar-inverse.navbar-static-top
+    .container-fluid
+      %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar 
+      %a= link_to "WrkOut!", root_path, { class: "navbar-brand" }
+      .navbar-collapse.collapse.navbar-responsive-collapse
+        %ul.nav.navbar-nav.pull-right
+          %li= link_to "New Workout", new_workout_path
+          %li= link_to "Link 3", "/path3"
 
+  .container
+    .row
+      .col-lg
+        %center.h1 WrkOut Log!
+    
+  .container
+    .row
+      .col-sm-12
+        = yield
