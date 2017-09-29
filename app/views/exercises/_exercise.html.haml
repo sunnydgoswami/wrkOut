@@ -1,5 +1,20 @@
-%h5 Exercise Name ~ #{exercise.name}
-%p Number of Sets:  #{exercise.sets}
-%p Number of Reps:  #{exercise.reps}
-%p Weight:  #{exercise.weight} lbs
-%p Notes: #{exercise.notes}
+%table.table.table-sm.table-responsive
+    %thead
+        %tr
+            %th Exercise: #{exercise.name}
+            %th Sets: #{exercise.sets}
+            %th Reps: #{exercise.reps}
+            %th Weight: #{exercise.weight}
+    %tfoot
+        %tr
+            %td Notes: #{exercise.notes}
+%br/
+    
+
+
+
+// %h5 Exercise Name ~ #{exercise.name}
+// %p Number of Sets:  #{exercise.sets}
+// %p Number of Reps:  #{exercise.reps}
+// %p Weight:  #{exercise.weight} lbs
+// %p Notes: #{exercise.notes}
