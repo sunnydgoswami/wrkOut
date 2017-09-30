@@ -1,10 +1,14 @@
 #workout 
 
 %center.h2= @workout.date.strftime("%A, %b %d ~ %r")
-%center.h3.show= @workout.workout
-%center.h3.show= @workout.mood
-%center.h3.show= @workout.length
+%center.h4.show Today you worked out your, #{@workout.workout}! 
+%center.h5.show You felt #{@workout.mood} and you sweat for #{@workout.length}! Great Job!!!
+// %center.h3.show Today You Worked Out: #{@workout.workout}
+// %center.h3.show You Felt Like: #{@workout.mood}
+// %center.h3.show You Sweat For: #{@workout.length}
 %hr/
+
+// %center.h4.show Today you worked out your, #{@workout.workout}! You felt, #{@workout.mood} and you sweat for #{@workout.length}! Great Job!!!
 
 #exercise
 %br/
