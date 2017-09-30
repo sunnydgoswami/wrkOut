@@ -2,10 +2,10 @@
     %thead
         %tr
             %th.main #{exercise.name}
-            %br/
             %th.sec Sets: #{exercise.sets}
             %th.sec Reps: #{exercise.reps}
-            %th.sec Weight: #{exercise.weight}            
+            %th.sec Weight: #{exercise.weight} 
+            // %th.sec= link_to "Delete", workout_path(@workout.exercises), method: :delete, data: { confirm: "Are you sure?" }
 
     %tfoot
         %tr 

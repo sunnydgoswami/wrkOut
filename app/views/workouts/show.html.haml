@@ -1,13 +1,15 @@
 #workout 
 
-%p= @workout.date.strftime("%A, %b %d ~ %r")
-%p= @workout.workout
-%p= @workout.mood
-%p= @workout.length
+%center.h2= @workout.date.strftime("%A, %b %d ~ %r")
+%center.h3.show= @workout.workout
+%center.h3.show= @workout.mood
+%center.h3.show= @workout.length
 %hr/
 
 #exercise
-%h3 Exercises:
+%br/
+%center.h3 Detailed Exercise Log:
+%br/
 = render @workout.exercises
 %hr/
 

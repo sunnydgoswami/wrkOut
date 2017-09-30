@@ -58,7 +58,7 @@ hr {
 }
 
 th.main {
- width: 25%;
+ width: 33.3%;
 }
 
 th.sec {
@@ -66,3 +66,15 @@ th.sec {
  color: white;
  font-weight: normal;
 }
+
+p {
+ overflow: auto;
+}
+
+.h3.show {
+ color: white;
+}
+
+// .table.thead.tr.th {
+//  border-top: 0px !important;
+// }
