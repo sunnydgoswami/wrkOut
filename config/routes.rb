@@ -3,5 +3,6 @@ Rails.application.routes.draw do
     resources :exercises
   end
   
+  get '/search' => 'search#index'
   root 'workouts#index'
 end
