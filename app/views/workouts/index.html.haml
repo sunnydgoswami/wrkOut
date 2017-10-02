@@ -2,6 +2,10 @@
     .row
         .col-lg
             %center.h1 WrkOut Log!
+            %center.ul
+                %li Track your daily workouts!
+                %li Click our nav bar and go to *Discover New Exercises* to change up your exercise routine!
+                
     .row
         - @workouts.each do |workout|
             %h3= link_to workout.date.strftime("%A, %b %d"), workout
