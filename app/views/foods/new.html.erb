@@ -1,0 +1,24 @@
+<h1>New Food</h1>
+<%= form_tag(new_food_path, method: :get) do %>
+  <%= text_field_tag :query, nil %>
+  <%= submit_tag "Search API for Foods" %>
+<% end %>
+
+<% if @results %>
+  <% @results.each do |result| %>
+
+    <h4>Name: <%= result["fields"]["item_name"] %></h4>
+    <p>Calories: <%= result["fields"]["nf_calories"] %></p>
+
+    <%= form_for @food do |f| %>
+      <%= f.hidden_field :name, value: result["fields"]["item_name"] %>
+      <%= f.hidden_field :calories, value: result["fields"]["nf_calories"] %>
+      <%= f.submit "Create Food" %>
+    <% end %>
+  <% end %>
+<% end %>
+
+
+<%= render 'form' %>
+
+<%= link_to 'Back', foods_path %>
