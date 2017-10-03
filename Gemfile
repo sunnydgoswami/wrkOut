@@ -15,10 +15,13 @@ gem 'haml', '~> 5.0', '>= 5.0.3'
 gem 'simple_form', '~> 3.5'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'google_custom_search_api'
+gem 'nutritionix'
+gem 'figaro'
+gem 'responders', '~> 2.3'
 
 
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+  gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
