@@ -1,4 +1,5 @@
 class Food < ActiveRecord::Base
+  belongs_to :workout, dependent: :destroy
 
   require "nutritionix/api_1_1"
 

@@ -1,0 +1,9 @@
+= simple_form_for([@workout, @workout.foods.build]) do |f|
+    = f.error_notification
+    = f.input :name, Label: "What food did you eat?", input_html: { class: "form-control" }
+    = f.input :calories, Label: "How many calories did you eat?", input_html: { class: "form-control" }
+    %hr/
+    %br/
+    = f.button :submit
+    = link_to 'Back', foods_path, { class: 'btn btn-danger pull-right' } 
+    

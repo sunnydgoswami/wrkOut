@@ -23,9 +23,14 @@ class FoodsController < ApplicationController
   end
 
   def create
-    @food = Food.new(food_params)
-    @food.save
-    respond_with(@food)
+    # @food = Food.new(food_params)
+    # @food.save
+    # respond_with(@food)
+    
+    @workout = Workout.find(params[:workout_id])
+    @food = @workout.foods.create(params[:food].permit(:name, :calories))
+        
+    redirect_to workout_path(@workout)
   end
 
   def update
