@@ -18,8 +18,9 @@
       %a= link_to "WrkOut!", root_path, { class: "navbar-brand" }
       .navbar-collapse.collapse.navbar-responsive-collapse
         %ul.nav.navbar-nav.pull-right
+          %li= link_to "Discover Exercises", search_path
+          %li= link_to "Food/Calorie Log", foods_path
           %li= link_to "New Workout", new_workout_path
-          %li= link_to "Discover", search_path
 
     
   .container
