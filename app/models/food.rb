@@ -11,7 +11,7 @@ class Food < ActiveRecord::Base
   def search_api_for(query)
     search_params = {
       limit: 10,
-      fields: ['item_name', 'nf_calories'],
+      fields: ['date','item_name', 'nf_calories'],
       query: query
     }
 

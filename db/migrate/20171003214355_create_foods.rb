@@ -1,6 +1,7 @@
 class CreateFoods < ActiveRecord::Migration
   def change
     create_table :foods do |t|
+      t.datetime :date
       t.string :name
       t.float :calories
 

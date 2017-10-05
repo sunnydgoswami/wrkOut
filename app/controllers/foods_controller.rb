@@ -4,7 +4,7 @@ class FoodsController < ApplicationController
   respond_to :html
 
   def index
-    @foods = Food.all
+    @foods = Food.all.order('created_at DESC')
     respond_with(@foods)
   end
 
@@ -45,6 +45,6 @@ class FoodsController < ApplicationController
     end
 
     def food_params
-      params.require(:food).permit(:name, :calories)
+      params.require(:food).permit(:date, :name, :calories)
     end
 end
